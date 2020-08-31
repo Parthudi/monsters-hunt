@@ -13,6 +13,7 @@ class App extends Component {
   componentDidMount() {
     fetch('http://jsonplaceholder.typicode.com/users').then((response) => {
          return response.json()}).then((user) => {
+          //user will return name of monsters and id of them.
            return   this.setState({ monsters : user})
           })
   }
@@ -27,11 +28,11 @@ class App extends Component {
   render() {
     const {monsters,  searchMonster} = this.state
     const filteredMonsters = monsters.filter((monster) => {
-     return monster.name.toLowerCase().includes(searchMonster.toLocaleLowerCase())
+     return monster.name.toLowerCase().includes(searchMonster.toLowerCase())
     })
     return (
       <div className="App">
-            <h1>  Monsters Rolodex   </h1>
+            <h1>  Monsters Hunt   </h1>
             <SearchBox  placeholder='Search Monsters'  handleChange={(event) => this.changeMonster(event)}/>
             <CardList monsters={filteredMonsters} /> 
       </div>
