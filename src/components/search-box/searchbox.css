@@ -1,11 +1,16 @@
 .search {
-    -webkit-appearance: none;
     margin : auto ;
     border: none;
     outline: none;
     padding: 10px;
-    width: 150px;
+    width: 200px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 5rem;
   }
   
+.searchBox{
+  font-size: large;
+  height: 3rem;
+  width: 20rem;
+  text-align: center;
+}

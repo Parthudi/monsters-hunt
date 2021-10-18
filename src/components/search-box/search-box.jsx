@@ -5,8 +5,11 @@ import './searchbox.css'
 const SearchBox = ({handleChange, placeholder}) => {
     return(
         <div className="search">
-                <input type='search' placeholder={placeholder} 
-                onChange={handleChange} />
+            <form >
+                <input className="searchBox" type='search' placeholder={placeholder} 
+                    onChange={handleChange} 
+                />
+            </form>
         </div>
     )
 }
